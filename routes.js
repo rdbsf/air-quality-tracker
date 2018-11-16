@@ -1,25 +1,20 @@
-var http = require('http');
+var request = require('request');
 
 module.exports = function(app){
     //var mixes = require('./controllers/mixes');
 
     app.get('/', function(req, res){
 
-        http.get('http://feeds.enviroflash.info/rss/realtime/133.xml', function(res) {
-            var response_data = '';
-            res.setEncoding('utf8');
-            res.on('data', function(chunk) {
-                response_data += chunk;
-            });
-            res.on('end', function() {
-                //callback(null, response_data)
-                res.setHeader('Content-Type', 'application/json');
+        request('http://feeds.enviroflash.info/rss/realtime/133.xml', function(error, response, body) {
+            res.setHeader('Content-Type', 'application/json');
                 //res.write(JSON.stringify({'airquality': '1.0'}));  
-                res.write(response_data);  
-            });
-            res.on('error', function(err) {
-                callback(err);
-            });
+                var parseString = require('xml2js').parseString;
+                var xml = body;//"<root>Hello xml2js!</root>"
+                parseString(xml, function (err, result) {
+                    //console.dir(result);
+                    res.write(result);  
+                });
+           
         });
 
         

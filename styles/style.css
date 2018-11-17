@@ -105,12 +105,12 @@ background-color: rgb(143, 63, 151);
 
 /* Mobile */
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 480px) {
     .container {
         margin:  0 20px;
     }
     td {
-        font-size:20px;
-        line-height: 20px;
+        font-size: 24px;
+        line-height: 24px;
     }
 }

@@ -79,14 +79,14 @@ background-color: rgb(143, 63, 151);
     background-color: rgba(0,0,0,.2);
 }
 .quality-bg-unheathy1 {
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.3);
 }
 .quality-bg-unheathy2 {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
 }
 .quality-bg-veryunheatlhy {
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.6);
 }
 .quality-bg-hazardous {
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,.8);
 }

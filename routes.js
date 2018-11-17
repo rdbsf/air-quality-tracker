@@ -2,6 +2,20 @@ var request = require('request');
 var feed = require('./feed')
 module.exports = function(app){
  
+
+    app.get('/aqi', function(req, res){
+
+        var initializePromise = feed();
+        initializePromise.then(function(feedDetails) {
+            console.log('here');
+            res.setHeader('Content-Type', 'application/json');
+            res.write(JSON.stringify({'aqi': feedDetails.aqi}));  
+            res.end();
+        });
+
+    });
+
+
     app.get('/', function(req, res){
 
         var initializePromise = feed();
@@ -30,18 +44,6 @@ module.exports = function(app){
             console.log(err);
         })
 
-
-    });
-
-    app.get('/aqi', function(req, res){
-
-        var initializePromise = feed();
-        initializePromise.then(function(result) {
-            feedDetails = result;
-            res.setHeader('Content-Type', 'application/json');
-            res.write(JSON.stringify({'aqi': feedDetails.aqi}));  
-
-        });
 
     });
 

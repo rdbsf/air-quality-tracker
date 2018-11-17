@@ -24,15 +24,20 @@ module.exports = function(){
                     parseString(xml, function (err, result) {
 
                         let airDescription = result.rss.channel[0].item[0].description[0];
+                        let qualityMessage = 'Current AQI Unavailable';
+                        let aqi = '-';
 
                         const $ = cheerio.load(airDescription)
                         let qualityHtml = $('div table tbody tr:nth-child(2) td div:nth-child(3) div').html();
-                        let qualityMessage = qualityHtml.split('-')[0].trim();
-                        let aqi = qualityHtml.split('-')[1].trim().split(' ')[0];
+                        if (qualityHtml)
+                        {
+                            qualityMessage = qualityHtml.split('-')[0].trim();
+                            aqi = qualityHtml.split('-')[1].trim().split(' ')[0];
+                        }
+                    
                         resolve({ airDescription: airDescription, message: qualityMessage, aqi: aqi });
 
                     });
-
 
                 }
         });

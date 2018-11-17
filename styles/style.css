@@ -55,6 +55,9 @@ table {
 .quality {
     padding: 20px;
 }
+.quality-unavailable {
+    background-color: #ccc;
+}
 .quality-good {
     background-color: #00E400;
 }
@@ -75,6 +78,9 @@ background-color: rgb(143, 63, 151);
 }
 
 
+.quality-bg-unavailable {
+    background-color: rgba(0,0,0,0);
+}
 .quality-bg-good {
     background-color: rgba(0,0,0,0);
 }

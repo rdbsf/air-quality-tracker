@@ -14,7 +14,10 @@ h1 {
     display: inline;
     color: #fff;
 }
-
+table {
+    width: 100%!important;
+    text-align: center;
+}
 .jumbotron {
     background-color: transparent;
     color: #fff;

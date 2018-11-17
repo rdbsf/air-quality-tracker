@@ -1,6 +1,6 @@
-npm start
+npm run dev
 
-http://localhost:3003/
+http://localhost:3004/
 
 
 Heroku

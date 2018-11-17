@@ -1,0 +1,21 @@
+doctype=html
+html(language=en)
+  head
+    title= title
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+    style
+      include ../styles/style.css
+      include ../styles/clouds.css
+  body
+    #clouds
+        .cloud.x1
+        .cloud.x2
+        .cloud.x3
+    .jumbotron.vertical-center
+        .container
+            div(class="quality-"+qualityClass)
+                span.quality 
+                    h1 !{message}
+                span.aqi 
+                    h1 !{aqi}
+            div.airDescription !{airDescription}        

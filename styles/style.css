@@ -3,7 +3,9 @@ body {
 }
 .container {
     background-color: rgba(255,255,255,.5);
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 h1, p {
     color: #fff;
@@ -11,27 +13,6 @@ h1, p {
 h1 {
     display: inline;
     color: #fff;
-}
-.quality {
-    padding: 20px;
-}
-.quality-good {
-    background-color: #00E400;
-}
-.quality-moderate {
-    background-color: #FFFF00;
-}
-.quality-unheathy1 {
-    background-color: #FF7E00;
-}
-.quality-unheathy2 {
-background-color: #FF0000;
-}
-.quality-veryunheatlhy {
-background-color: rgb(143, 63, 151);
-}
-.quality-hazardous {
-    background-color: #7E0023;
 }
 
 .jumbotron {
@@ -61,3 +42,51 @@ background-color: rgb(143, 63, 151);
                              /* reset the font property */
     font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+
+  .airDescription {
+      padding: 20px;
+  }
+
+/* Warning Colors */
+
+.quality {
+    padding: 20px;
+}
+.quality-good {
+    background-color: #00E400;
+}
+.quality-moderate {
+    background-color: #FFFF00;
+}
+.quality-unheathy1 {
+    background-color: #FF7E00;
+}
+.quality-unheathy2 {
+background-color: #FF0000;
+}
+.quality-veryunheatlhy {
+background-color: rgb(143, 63, 151);
+}
+.quality-hazardous {
+    background-color: #7E0023;
+}
+
+
+.quality-bg-good {
+    background-color: rgba(0,0,0,0);
+}
+.quality-bg-moderate {
+    background-color: rgba(0,0,0,.2);
+}
+.quality-bg-unheathy1 {
+    background-color: rgba(0,0,0,.4);
+}
+.quality-bg-unheathy2 {
+    background-color: rgba(0,0,0,.6);
+}
+.quality-bg-veryunheatlhy {
+    background-color: rgba(0,0,0,.8);
+}
+.quality-bg-hazardous {
+    background-color: rgba(0,0,0,1);
+}

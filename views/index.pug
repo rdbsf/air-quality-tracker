@@ -7,15 +7,16 @@ html(language=en)
       include ../styles/style.css
       include ../styles/clouds.css
   body
-    #clouds
-        .cloud.x1
-        .cloud.x2
-        .cloud.x3
-    .jumbotron.vertical-center
-        .container
-            div(class="quality quality-"+qualityClass)
-                span.quality 
-                    h1 !{message}
-                span.aqi 
-                    h1 !{aqi}
-            div.airDescription !{airDescription}        
+    div(class="cover quality-bg-"+qualityClass)
+        #clouds
+            .cloud.x1
+            .cloud.x2
+            .cloud.x3
+        .jumbotron.vertical-center
+            .container
+                div(class="quality quality-"+qualityClass)
+                    span.quality 
+                        h1 !{message}
+                    span.aqi 
+                        h1 !{aqi}
+                div.airDescription !{airDescription}        

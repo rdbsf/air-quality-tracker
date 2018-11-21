@@ -1,13 +1,5 @@
 /*Lets start with the cloud formation rather*/
 
-/*The container will also serve as the SKY*/
-
-/* *{ margin: 0; padding: 0;} */
-
-body {
-	/*To hide the horizontal scroller appearing during the animation*/
-	/* overflow: hidden; */
-}
 
 #clouds{
 	padding: 100px 0;

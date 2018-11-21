@@ -1,18 +1,27 @@
-Local dev
-npm run dev
+## SF Air Quality Checker
 
-Local view
+### Local dev
+```sh
+npm run dev
+```
 http://localhost:3004/
 
-Test
-npm test
-
-Heroku commands
-
+### Heroku commands
+```sh
 git push heroku master
 heroku open
 heroku logs --tail
+```
 
+### Tests
+```sh
+npm test
+```
+
+### Live
+https://airqualitysf.herokuapp.com/
+
+### Credits
 AQI via
 https://airnow.gov/index.cfm?action=aqibasics.aqi#sens
 

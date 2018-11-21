@@ -8,11 +8,3 @@ describe('Test the aqi path', () => {
         });
     });
 });
-describe('Test the aqi value', () => {
-    test('It should response the value', (done) => {
-        request(app).get('/aqi').then((response) => {
-            expect(response.body.aqi).toBe('-');
-            done();
-        });
-    });
-});
